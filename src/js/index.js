@@ -9,4 +9,28 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let counter = 0;
+
+function tick() {
+    counter++
+    let arraycounter = counter.toString().padStart(6, 0).split('');
+    const element = ( <
+        div cla >
+        <
+        i class = "far fa-clock" > < /i>  {
+        arraycounter.map((count, i) => ( <
+                h2 key = {
+                    i
+                }
+                className = "estilosContador" > {
+                    count
+                } < /h2>            ))
+            }
+
+            <
+            /div>
+        ); ReactDOM.render(element, document.querySelector("#app"));
+    }
+
+    setInterval(tick, 1000);
+    //ReactDOM.render( < Home / > , document.querySelector("#app"));
