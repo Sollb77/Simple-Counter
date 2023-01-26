@@ -15,9 +15,9 @@ function tick() {
     counter++
     let arraycounter = counter.toString().padStart(6, 0).split('');
     const element = ( <
-        div cla >
+        div className = "bg-dark m-3" >
         <
-        i class = "far fa-clock" > < /i>  {
+        i class = "far fa-clock text-light" > < /i>
         arraycounter.map((count, i) => ( <
                 h2 key = {
                     i
